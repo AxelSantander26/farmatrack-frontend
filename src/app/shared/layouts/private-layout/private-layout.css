@@ -1,0 +1,8 @@
+/* contenido a la derecha del sidebar */
+.main-content {
+    margin-left: 270px;   /* mismo ancho del sidebar */
+    padding: 20px;        /* opcional, espacio interno */
+    min-height: 100vh;    /* altura completa */
+    background-color: #f5f5f5; /* opcional */
+    overflow-y: auto;     /* scroll si es necesario */
+}

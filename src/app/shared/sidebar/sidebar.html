@@ -1,0 +1,64 @@
+<div class="sidebar">
+    <!-- User Card Fijo en la parte superior -->
+    <div class="user-card">
+        <div class="user-avatar">AJ</div>
+        <div class="user-info">
+            <div class="full-name">Axel Jesus</div>
+            <div class="last-name">Santander Alcarraz</div>
+            <div class="role-badge">Administrador</div>
+        </div>
+    </div>
+
+    <!-- Contenedor para la navegación con scroll -->
+    <div class="nav-container">
+        <nav id="menu">
+            <a [routerLink]="'/dashboard'" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                <lucide-icon name="home" class="nav-icon"></lucide-icon> Inicio
+            </a>
+
+            <details>
+                <summary>
+                    <lucide-icon name="shopping-cart" class="nav-icon"></lucide-icon> Ventas
+                </summary>
+                <div class="submenu">
+                    <a [routerLink]="'/ventas/form'" routerLinkActive="active">
+                        <lucide-icon name="plus-circle" class="nav-icon"></lucide-icon> Registrar Venta
+                    </a>
+                    <a [routerLink]="'/ventas'" routerLinkActive="active">
+                        <lucide-icon name="clock" class="nav-icon"></lucide-icon> Historial de Ventas
+                    </a>
+                </div>
+            </details>
+
+            <a [routerLink]="'/productos'" routerLinkActive="active">
+                <lucide-icon name="package" class="nav-icon"></lucide-icon> Inventario
+            </a>
+
+            <a [routerLink]="'/clientes'" routerLinkActive="active">
+                <lucide-icon name="users" class="nav-icon"></lucide-icon> Clientes
+            </a>
+
+            <a [routerLink]="'/proveedores'" routerLinkActive="active">
+                <lucide-icon name="truck" class="nav-icon"></lucide-icon> Proveedores
+            </a>
+
+            <details>
+                <summary>
+                    <lucide-icon name="settings" class="nav-icon"></lucide-icon> Configuración
+                </summary>
+                <div class="submenu">
+                    <a [routerLink]="'/usuarios'" routerLinkActive="active">
+                        <lucide-icon name="user" class="nav-icon"></lucide-icon> Usuarios
+                    </a>
+                </div>
+            </details>
+        </nav>
+    </div>
+
+    <!-- Footer Fijo en la parte inferior -->
+    <div class="footer-links">
+        <a [routerLink]="'/login'">
+            <lucide-icon name="log-out" class="nav-icon"></lucide-icon> Cerrar Sesión
+        </a>
+    </div>
+</div>

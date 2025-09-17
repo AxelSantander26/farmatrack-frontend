@@ -1,0 +1,242 @@
+.sidebar {
+    width: 270px;
+    height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.user-card {
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+    flex-shrink: 0;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    font-weight: 600;
+    font-size: 25px;
+    border: 2px solid #e2e8f0;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-info .full-name {
+    font-weight: 600;
+    font-size: 16px;
+    color: #1e293b;
+}
+
+.user-info .last-name {
+    font-weight: 500;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.role-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+nav {
+    flex: 1;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+}
+
+nav::-webkit-scrollbar {
+    width: 6px;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+nav a,
+details summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #475569;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+nav a:hover,
+details summary:hover,
+nav a:focus,
+details summary:focus {
+    background: #f8fafc;
+    color: #334155;
+}
+
+nav a.active {
+    background: #f1f5f9;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* ESTILOS ACTUALIZADOS PARA CENTRAR LOS ICONOS */
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    color: #64748b;
+    display: flex !important; /* Forzar display flex */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-shrink: 0; /* Evitar que se encoja */
+}
+
+/* Ajustar alineación para elementos lucide-icon */
+lucide-icon.nav-icon {
+    display: inline-flex !important; /* Cambiar a inline-flex para lucide-icon */
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+    margin-top: -2px; /* Ajuste fino de alineación */
+}
+
+nav a.active .nav-icon,
+details summary:hover .nav-icon {
+    color: #475569;
+}
+
+details {
+    margin: 0;
+}
+
+details summary {
+    list-style: none;
+    position: relative;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary::after {
+    content: "›";
+    margin-left: auto;
+    transition: transform 0.3s ease;
+    font-size: 18px;
+    color: #94a3b8;
+}
+
+details[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.submenu {
+    padding-left: 20px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.submenu a {
+    font-size: 13.5px;
+    padding: 10px 15px 10px 35px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.submenu a:hover {
+    color: #1e293b;
+    background: #f8fafc;
+}
+
+.footer-links {
+    padding: 20px 15px;
+    border-top: 1px solid #f1f5f9;
+    flex-shrink: 0;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    color: #475569;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.footer-links a:hover .nav-icon {
+    color: #dc2626;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 968px) {
+    .sidebar {
+        width: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .nav-container {
+        max-height: 300px;
+    }
+}
